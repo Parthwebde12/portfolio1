@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="icon" type="image/png" href="PW.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      color: #0088e8;
+      opacity: 0.9;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background-color: #333;
+      padding-top: 60px;
+      transition: 0.3s;
+      overflow-x: hidden;
+    }
+
+    nav a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #768601;
+    }
+
+    .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+    }
+
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #333;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+    }
+
+    .container {
+      transition: margin-left 0.3s;
+      padding: 16px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    header {
+      position: relative;
+      text-align: center;
+      padding: 128px 16px;
+      background: url('20241225_110323.jpeg') no-repeat center center;
+      background-size: cover;
+      color: white;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Adjust the opacity here */
+      z-index: 1;
+    }
+
+    header h1,
+    header p,
+    header .btn {
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      font-size: 50px;
+      color: #ff6347;
+    }
+
+    header p {
+      font-size: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 5px 10px;
+      font-size: 14px;
+      color: white;
+      background-color: #333;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ff6347;
+    }
+
+    .portfolio,
+    .contact {
+      padding: 32px 16px;
+    }
+
+    .portfolio h2,
+    .contact h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .project {
+      flex: 1 1 calc(50% - 32px);
+      background-color: #f1f1f1;
+      padding: 16px;
+      border-radius: 8px;
+      border: 2px solid #ff6347;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact .form-group {
+      margin-bottom: 15px;
+    }
+
+    .contact label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .contact textarea {
+      resize: vertical;
+      height: 150px;
+    }
+
+    .contact button {
+      width: 100%;
+      padding: 10px;
+      background-color: #ff6347;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contact button:hover {
+      background-color: #e5533d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="mySidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#home">Home</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="container">
+    <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+    <header id="home">
+      <h1>Parth Wakodikar</h1>
+      <p>Photographer and Webdesigner</p>
+      <a href="#" class="btn"><i class="fa fa-download"></i> Download Resume</a>
+    </header>
+    <section class="portfolio" id="portfolio">
+      <h2>My Portfolio</h2>
+      <p>I am a photographer and front-end developer with minimum C and C++ language experience. Welcome to my portfolio. Here you will find a selection of my recent projects, showcasing my skills in web design, photography, and branding.</p>
+      <div class="projects">
+        <div class="project">
+          <h3>Project 1</h3>
+          <p>Description of project 1.</p>
+        </div>
+        <div class="project">
+          <h3>Project 2</h3>
+          <p>Description of project 2.</p>
+        </div>
+        <div class="project">
+          <h3>Project 3</h3>
+          <p>Description of project 3.</p>
+        </div>
+        <div class="project">
+          <h3>Project 4</h3>
+          <p>Description of project 4.</p>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <p>If you would like to get in touch, please fill out the form below:</p>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  </div>
+  <footer>
+    <p>2025 Parth Wakodikar. All rights reserved.</p>
+  </footer>
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.querySelector('.container').style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.querySelector('.container').style.marginLeft = "0";
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert('Form submitted successfully!');
+    });
+  </script>
+</body>
+
+</html>
